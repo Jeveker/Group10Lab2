@@ -12,7 +12,6 @@ public abstract class MiddleEarthCharacter {
 	 * @param power Power level of character
 	 */
 	public MiddleEarthCharacter(String name, double health, double power) {
-		super();
 		this.name = name;
 		this.health = health;
 		this.power = power;
