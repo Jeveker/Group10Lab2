@@ -12,7 +12,6 @@ public abstract class MiddleEarthCharacter {
 	 * @param power Power level of character
 	 */
 	public MiddleEarthCharacter(String name, double health, double power) {
-		super();
 		this.name = name;
 		this.health = health;
 		this.power = power;
@@ -23,12 +22,12 @@ public abstract class MiddleEarthCharacter {
 	 * health, returns false if attack was ineffective or against their own kin.
 	 * @param target The character to attack
 	 */
-	public boolean attack(MiddleEarthCharacter target);
+	public abstract boolean attack(MiddleEarthCharacter target);
 	
 	/**
 	 * Abstract method to return the race of the character.
 	 */
-	public String getRace();
+	public abstract String getRace();
 	
 	/**
 	 * Prints character details.
@@ -38,7 +37,7 @@ public abstract class MiddleEarthCharacter {
 		System.out.println("Name: " + name);
 		System.out.println("Health: " + health);
 		System.out.println("Power: " + name);
-		System.out.println("Race: " + get.Race());
+		System.out.println("Race: " + getRace());
 	}
 	
 	
