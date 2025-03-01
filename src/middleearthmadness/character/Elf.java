@@ -33,7 +33,7 @@ public class Elf extends MiddleEarthCharacter {
 			System.out.println("Successful attack! " + damage + " damage dealt against " + target.getRace() +"." );
 			return true;
 		} else {
-			System.out.println("Ineffective attack! Zero damage done. Zero damage dealth against " + target.getRace() + ".");
+			System.out.println("Ineffective attack! Zero damage dealt against " + target.getRace() + ".");
 			return false;
 		}
 	}
