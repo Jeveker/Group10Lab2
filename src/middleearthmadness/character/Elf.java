@@ -28,12 +28,12 @@ public class Elf extends MiddleEarthCharacter {
 		
 		// Applies normal damage against Human and Wizard by default
 		
-		if (damage > 0) { // Reduce target's health
+		if (damage > 0) { // Reduces target's health
 			target.setHealth(target.getHealth() - damage);
-			System.out.println("Successful attack!");
+			System.out.println("Successful attack! " + damage + " damage dealt against " + target.getRace() +"." );
 			return true;
 		} else {
-			System.out.println("Ineffective attack! Zero damage done.");
+			System.out.println("Ineffective attack! Zero damage done. Zero damage dealth against " + target.getRace() + ".");
 			return false;
 		}
 	}
