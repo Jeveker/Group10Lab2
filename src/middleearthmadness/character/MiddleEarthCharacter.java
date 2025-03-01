@@ -36,7 +36,7 @@ public abstract class MiddleEarthCharacter {
 		System.out.println("Character details...");
 		System.out.println("Name: " + name);
 		System.out.println("Health: " + health);
-		System.out.println("Power: " + name);
+		System.out.println("Power: " + power);
 		System.out.println("Race: " + getRace());
 	}
 
