@@ -37,7 +37,7 @@ public class CharacterManager {
 	 * @return Returns null if name is invalid or if the character is not found, returns the MiddleEarthCharacter that matches the given name if found.
 	 */
 	MiddleEarthCharacter getCharacter(String name) {
-		if (name == null) { // 
+		if (name == null) { // invalid name
 			System.out.println("Invalid character name.");
 			return null;
 		}
