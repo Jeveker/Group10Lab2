@@ -1,8 +1,16 @@
 package middleearthmadness.singleton;
 
+import middleearthmadness.cms.CharacterManager;
+
 public class MiddleEarthCouncil {
 	
 	private static MiddleEarthCouncil instance;
+	private CharacterManager characterManager;
+	
+	
+	private MiddleEarthCouncil() {
+		characterManager = new CharacterManager();
+	}
 	
 	/**
 	 * Singleton method that returns a single instance
@@ -15,6 +23,15 @@ public class MiddleEarthCouncil {
 		}
 		
 		return instance;
+	}
+	
+	/**
+	 * getter for CharacterManager instance
+	 * 
+	 * @return
+	 */
+	public CharacterManager getCharacterManager() {
+		return characterManager;
 	}
 
 }
