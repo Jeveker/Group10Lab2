@@ -12,7 +12,7 @@ public class CharacterManager {
 	 * @param c The character to add
 	 * @return Return true if successfully added, return false if the character to add is invalid.
 	 */
-	boolean addCharacter(MiddleEarthCharacter c) {
+	public boolean addCharacter(MiddleEarthCharacter c) {
 		if (c == null) {
 			System.out.println("Invalid character.");
 			return false;
