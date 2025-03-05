@@ -1,4 +1,4 @@
-package middleearthapp;
+package middleearthapp.menu;
 
 import java.util.Scanner;
 

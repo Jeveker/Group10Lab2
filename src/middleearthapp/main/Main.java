@@ -1,4 +1,4 @@
-package middleearthapp;
+package middleearthapp.main;
 
 /**
  * main class for Middle Earth Character Management System
