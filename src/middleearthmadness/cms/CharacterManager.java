@@ -36,7 +36,7 @@ public class CharacterManager {
 	 * @param name The name of the character to return.
 	 * @return Returns null if name is invalid or if the character is not found, returns the MiddleEarthCharacter that matches the given name if found.
 	 */
-	MiddleEarthCharacter getCharacter(String name) {
+	public MiddleEarthCharacter getCharacter(String name) {
 		if (name == null) { // invalid name
 			System.out.println("Invalid character name.");
 			return null;
@@ -58,7 +58,7 @@ public class CharacterManager {
 	 * @param power The power to update.
 	 * @return Returns true if any update is made. Returns false if there are no changes to make.
 	 */
-	boolean updateCharacter (MiddleEarthCharacter character, String name, int health, int power) {
+	public boolean updateCharacter (MiddleEarthCharacter character, String name, int health, int power) {
 		for (int i = 0; i < size; i++) {
 			if (characters[i].equals(character)) {
 				if ((characters[i].getName().equals(name)) &&
@@ -83,7 +83,7 @@ public class CharacterManager {
 	 * @param character The character to delete
 	 * @return Return true if successfully deleted, returns false if the character provided is invalid or not found. 
 	 */
-	boolean deleteCharacter(MiddleEarthCharacter character) {
+	public boolean deleteCharacter(MiddleEarthCharacter character) {
 		
 		if (character == null) {
 			System.out.println("Invalid character provided.");
@@ -107,7 +107,7 @@ public class CharacterManager {
 	/**
 	 * Displays information of all characters in the management system.
 	 */
-	void displayAllCharacters() {
+	public void displayAllCharacters() {
 		for (int i = 0; i < size; i++) {
 			characters[i].displayInfo();
 		}
