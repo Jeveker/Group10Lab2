@@ -105,8 +105,9 @@ public class Menu {
     	double health = scanner.nextDouble();
     	System.out.print("Enter your character's power: ");
     	double power = scanner.nextDouble();
+    	scanner.nextLine();
     	System.out.print("Enter your character's race (choose from Elf, Dwarf, Human, Orc, or Wizard): ");
-    	String race = scanner.nextLine();
+    	String race = scanner.nextLine().trim().toLowerCase();
     	
     	//there is an error check that is needed here, what if user input doesn't match case (i.e. "Elf" is different from "elf" but both are valid?)
     	MiddleEarthCharacter character;
