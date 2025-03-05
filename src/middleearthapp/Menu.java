@@ -60,14 +60,32 @@ public class Menu {
     
 //i think these should all be booleans instead of void, but this just for setup
     
+    /**
+     * Displays menu options for user-selection
+     */
     private void displayMenu() {
-    	
+        System.out.println("\n=== Middle-Earth Character Management System ===");
+        System.out.println("1. Add a new character");
+        System.out.println("2. View all characters");
+        System.out.println("3. Update a character");
+        System.out.println("4. Delete a character");
+        System.out.println("5. Execute all characters’ attack actions");
+        System.out.println("6. Exit");
+        System.out.print("Enter your choice: ");
     }
     
     
-    
+    /**
+     * Retrieves and checks user's menu selection
+     * @returns the menu choice, if a valid integer input
+     */
     private int getUserChoice() {
+    	while (!scanner.hasNextInt()) {
+    		System.out.print("Please enter a valid integer: ");
+    		scanner.next();
+    	}
     	
+    	return scanner.nextInt();
     }
     
     
