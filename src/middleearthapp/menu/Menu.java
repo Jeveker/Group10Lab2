@@ -59,7 +59,7 @@ public class Menu {
                     scanner.close();
                     return;
                 default:
-                    System.out.println("Inavlid choice. Please enter a valid entry.");
+                    System.out.println("Invalid choice. Please enter a valid entry.");
             }
         }
     }
