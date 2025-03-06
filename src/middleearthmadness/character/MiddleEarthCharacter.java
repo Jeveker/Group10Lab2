@@ -40,26 +40,49 @@ public abstract class MiddleEarthCharacter {
 		System.out.println("Race: " + getRace());
 	}
 
+	/**
+	 * Getter for character's name.
+	 * @return Returns the name of the character.
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * Setter for the character's name
+	 * @param name The name to set the character's name to.
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * Getter for the character's health.
+	 * @return Returns health of the character.
+	 */
 	public double getHealth() {
 		return health;
 	}
 
+	/**
+	 * Setter for the character's health level.
+	 * @param power The health level to set the character's power to.
+	 */
 	public void setHealth(double health) {
 		this.health = health;
 	}
-
+	/**
+	 * Getter for the character's power level.
+	 * @return Returns power level of the character.
+	 */
 	public double getPower() {
 		return power;
 	}
 
+	/**
+	 * Setter for the character's power level.
+	 * @param power The power level to set the character's power to.
+	 */
 	public void setPower(double power) {
 		this.power = power;
 	}
