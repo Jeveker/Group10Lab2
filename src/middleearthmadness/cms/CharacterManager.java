@@ -65,7 +65,7 @@ public class CharacterManager {
 	 * @param power The power to update.
 	 * @return Returns true if any update is made. Returns false if there are no changes to make.
 	 */
-	public boolean updateCharacter (MiddleEarthCharacter character, String name, int health, int power) {
+	public boolean updateCharacter (MiddleEarthCharacter character, String name, double health, double power) {
 		for (int i = 0; i < size; i++) {
 			if (characters[i].equals(character)) {
 				if ((characters[i].getName().equals(name)) &&
@@ -118,6 +118,18 @@ public class CharacterManager {
 		for (int i = 0; i < size; i++) {
 			characters[i].displayInfo();
 		}
+	}
+	
+	/**
+	 * Returns an array of all active characters currently stored. 
+	 * @return an array containing all valid MiddleEarthCharacter objects.
+	 */
+	public MiddleEarthCharacter[] getAllCharacters() {
+		MiddleEarthCharacter[] activeCharacters = new MiddleEarthCharacter[size];
+		for (int i=0; i<size; i++) {
+			activeCharacters[i] = characters[i];
+		}
+		return activeCharacters;
 	}
 }
 

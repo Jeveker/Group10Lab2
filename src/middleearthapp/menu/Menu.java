@@ -145,13 +145,45 @@ public class Menu {
     }
     
     
+    /**
+     * Updates an existing user character
+     */
     private void updateCharacter() {
-    		
+    	scanner.nextLine();
+    	System.out.println("Enter the name of the character to update: ");
+    	String name = scanner.nextLine();
+    	MiddleEarthCharacter character = characterManager.getCharacter(name);
+    	
+    	if (character == null) {
+    		System.out.println("Character not found!");
+    		return;
+    	}
+    	
+    	System.out.println("Enter new health (enter -1 to keep current value): ");
+    	double health = scanner.nextDouble();
+    	System.out.println("Enter new power (enter -1 to keep current value):");
+    	double power = scanner.nextDouble();
+    	
+    	if (health == -1) {
+    		health = character.getHealth();
+    	}
+    	if (power ==-1) {
+    		power = character.getPower();
+    	}
+    	
+    	if (characterManager.updateCharacter(character,  name,  health,  power)) {
+    		System.out.println("Character update succesfull!");
+    	}
+    	else {
+    		System.out.println("Something went wrong. No character changes made.");
+    	}
     }
     
     
     
-    
+    /**
+     * Deletes an existing user character.
+     */
     private void deleteCharacter() {
     	scanner.nextLine();
     	System.out.println("Enter the name of the character to delete: ");
@@ -171,14 +203,37 @@ public class Menu {
     	}
     }
     
-    
-    
+    /**
+     * Initiates attack sequence between all characters
+     */
     private void executeAttacks() {
-    	
+        System.out.println("Characters are attacking each other...");
+        MiddleEarthCharacter[] characters = characterManager.getAllCharacters();
+        
+        //iterating for attacking character
+        for (int i = 0; i < characters.length; i++) {
+        	
+        	//iterating for character being attacked, i+1 to ensure no duplicates or attacks on oneself.
+            for (int j = i + 1; j < characters.length; j++) {
+            	
+                if (characters[i] != null && characters[j] != null) {
+                	
+                	//confirmation of attack or ineffectiveness
+                    boolean attackSuccess = characters[i].attack(characters[j]);
+                    
+                    if (attackSuccess) {
+                        System.out.println(characters[i].getName() + " successfully attacked " + characters[j].getName());
+                    } 
+                    else {
+                        System.out.println(characters[i].getName() + " could not damage " + characters[j].getName());
+                    }
+                }
+            }
+        }
     }
-    
     
 
 	
 
 }
+
