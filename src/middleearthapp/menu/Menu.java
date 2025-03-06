@@ -159,15 +159,15 @@ public class Menu {
     	MiddleEarthCharacter character = characterManager.getCharacter(name);
     	
     	if(character == null) {
-    		System.out.println("Character you entered was not fonud, deletion failed");
+    		System.out.println("Character you entered was not found, deletion failed.");
     		return;
     	}
     	
     	if(characterManager.deleteCharacter(character)) {
-    		System.out.println("Character Succesfully deleted");
+    		System.out.println("Character succesfully delete!");
     	}
     	else {
-    		System.out.println("Failed to delete character");
+    		System.out.println("Failed to delete character.");
     	}
     }
     
