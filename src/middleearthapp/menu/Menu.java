@@ -24,14 +24,12 @@ public class Menu {
 	 */
 	public Menu() {
 		this.scanner = new Scanner(System.in);
-		
-//i dunno what the getter is for this :(
         this.characterManager = MiddleEarthCouncil.getInstance().getCharacterManager();
 
 	}
 	
 	/**
-	 * runs menu loop, allows user to manage characters and their actions
+	 * Runs menu loop, allows user to manage characters and their actions.
 	 */
     public void run() {
         while (true) {

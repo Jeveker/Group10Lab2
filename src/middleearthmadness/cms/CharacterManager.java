@@ -7,6 +7,13 @@ public class CharacterManager {
 	private int size;
 	
 	/**
+	 * Constructor to initialize characters array and size
+	 */
+	public CharacterManager() {
+		this.characters = new MiddleEarthCharacter[5]; // max characters in the array is 5
+		this.size = 0;
+	}
+	/**
 	 * Adds character to array, doubles array size if full by creating a new array with double the 
 	 * size and copying over the previous characters into the new, larger array.
 	 * @param c The character to add

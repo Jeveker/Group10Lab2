@@ -9,7 +9,7 @@ public class MiddleEarthCouncil {
 	
 	
 	private MiddleEarthCouncil() {
-		characterManager = new CharacterManager();
+		this.characterManager = new CharacterManager();
 	}
 	
 	/**
