@@ -108,7 +108,7 @@ public class Menu {
     	String race = scanner.nextLine().trim().toLowerCase(); // accounts for uppercase or lowercase user input
     	
     	MiddleEarthCharacter character;
-    	switch (race) {
+    	switch (race.toLowerCase()) {
     		case "elf":
     			character = new Elf(name, health, power);
     			break;
@@ -153,7 +153,22 @@ public class Menu {
     
     
     private void deleteCharacter() {
+    	scanner.nextLine();
+    	System.out.println("Enter the name of the character to delete: ");
+    	String name = scanner.nextLine();
+    	MiddleEarthCharacter character = characterManager.getCharacter(name);
     	
+    	if(character == null) {
+    		System.out.println("Character you entered was not fonud, deletion failed");
+    		return;
+    	}
+    	
+    	if(characterManager.deleteCharacter(character)) {
+    		System.out.println("Character Succesfully deleted");
+    	}
+    	else {
+    		System.out.println("Failed to delete character");
+    	}
     }
     
     
